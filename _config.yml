@@ -1,0 +1,12 @@
+base-url: /
+name: TEC Club
+description: Technology Entrepreneurship Coding
+
+markdown: rdiscount
+rdiscount:
+    extensions: [smart]
+pygments: true
+permalink: /:year/:title/
+
+safe: true
+lsi: false
