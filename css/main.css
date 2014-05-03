@@ -159,27 +159,11 @@ input[type="checkbox"] {
 /* Common
 /*
 /*****************************************************************************/
-::-moz-selection {
-  background: #53a1b8;
-  color: #fff;
-  text-shadow: none;
-}
-::selection {
-  background: #53a1b8;
-  color: #fff;
-  text-shadow: none;
-}
 html {
-  font: 18px/1.5 serif;
   font-family: Ubuntu, sans-serif;
-  font-weight: 300;
-  background-color: #333;
+  font-size: 62.5%;
+  line-height: 1.4;
   color: #000000;
-}
-@media (min-width: 40rem) {
-  html {
-    font-size: 16px;
-  }
 }
 code,
 kbd,
@@ -187,49 +171,39 @@ pre,
 samp {
   font-weight: 400;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #53a1b8;
-  font-weight: 300;
+.text-content {
+  font-size: 1.6rem;
 }
 h1 {
-  font-size: 2.5rem;
-  line-height: 1.33333;
+  font-size: 2.5em;
 }
 h2 {
-  font-size: 2rem;
-  line-height: 1.6;
+  font-size: 2em;
 }
 h3 {
-  font-size: 1.75rem;
-  line-height: 1;
+  font-size: 1.75em;
 }
 h4 {
-  font-size: 1.5rem;
+  font-size: 1.5em;
 }
 h5 {
-  font-size: 1.25rem;
+  font-size: 1.25em;
 }
 h6 {
-  font-size: 1.1rem;
+  font-size: 1.1em;
 }
 ul {
   margin: 0;
 }
-li {
-  padding-top: .5em;
-}
-li:first-child {
-  padding-top: 0;
-}
-h5,
-h6 {
-  margin-top: .3em;
-  margin-bottom: .3em;
+/*****************************************************************************/
+/*
+/* Layout
+/*
+/*****************************************************************************/
+.container {
+  width: 90%;
+  max-width: 70rem;
+  margin: 0 auto;
 }
 /*****************************************************************************/
 /*
