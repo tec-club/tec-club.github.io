@@ -4,6 +4,14 @@
 {% assign author = site.data.authors[page.author] %}
 
 $grey-color:       #828282;
+$dark_level_1: #000000;
+$dark_level_2: #212121;
+$dark_level_3: #303030;
+$dark_level_4: #424242;
+$white_color: #FFFFFF;
+$opacity_primary: 1.0;
+$opacity_secondary: 0.7;
+$opacity_disabled: 0.5;
 
 .icon {
 
@@ -48,7 +56,10 @@ main {
 }
 
 body {
+  background-color: $dark_level_3;
   font-family: $font-sans;
+  color: $white_color;
+  opacity: 1;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -230,7 +241,8 @@ body {
     letter-spacing: -0.04em;
     font-size: 50px;
     line-height: 1.1;
-    color: #333332;
+    color: $white_color;
+    opacity: 1;
     margin-bottom: 50px;
   }
   .author-image {
@@ -261,11 +273,14 @@ body {
   .post-content {
     width: 100%;
     font-family: $font-serif;
-    color: #333333;
+    color: $white_color;
+    opacity: 1.0;
     h1, h2, h3 {
       font-family: $font-sans;
     }
     h3, h4, h5, h6 {
+      color: $white_color;
+      opacity: $opacity_primary;
       letter-spacing: -0.02em;
       font-weight: 700;
       font-style: normal;
@@ -295,7 +310,8 @@ body {
       letter-spacing: -.002em;
       margin-top: 30px;
       margin-bottom: 0;
-      color: #333333;
+      color: $white_color;
+      opacity: $opacity_secondary;
       -webkit-hyphens: auto;
       -moz-hyphens: auto;
       hyphens: auto;
@@ -398,11 +414,11 @@ body {
         padding-bottom: 32px;
       }
       a {
-        color: black;
+        color: $white_color;
+        opacity: $opacity_secondary;
         text-decoration: none;
         &:hover {
-          color: #333333;
-          text-decoration: underline;
+          opacity: $opacity_primary;
         }
       }
       .author-image {
@@ -448,23 +464,30 @@ body {
       .site-footer {
         margin: 0;
         padding: 0;
-        color: #333333;
+        color: $white_color;
+        opacity: $opacity_primary;
         text-align: left;
         font-size: 14px;
         line-height: 1.3;
-        color: #999999;
+        color: $white_color;
         a {
-          color: #333333;
+          color: $white_color;
+          opacity: $opacity_secondary;
           text-decoration: none;
           &:hover {
-            text-decoration: underline;
+            opacity: $opacity_primary;
           }
         }
-        .poweredby {
+        .copyright {
+        color: $white_color;
+        opacity: $opacity_disabled;
+        }
+        .poweredbyx {
           display: block;
           padding-bottom: 18px;
           font-weight: 700;
-          color: #333333;
+          color: $white_color;
+          opacity: $opacity_disabled;
         }
       }
     }
@@ -476,13 +499,14 @@ body {
   padding: 20px 0 0;
   a {
     text-decoration: none;
-    color: #bbbbbb;
+    color: $white_color;
+    opacity: $opacity_secondary;
     padding-left: 12px;
     .hidden {
       display: none;
     }
     &:hover {
-      color: #333333;
+      opacity: $opacity_primary;
     }
   }
 }
