@@ -4,14 +4,17 @@
 {% assign author = site.data.authors[page.author] %}
 
 $grey-color:       #828282;
+
 $dark_level_1: #000000;
 $dark_level_2: #212121;
 $dark_level_3: #303030;
 $dark_level_4: #424242;
 $white_color: #FFFFFF;
+$accent_color: #FFC107;
 $opacity_primary: 1.0;
 $opacity_secondary: 0.7;
 $opacity_disabled: 0.5;
+$opacity_divider: 0.12;
 
 .icon {
 
@@ -37,8 +40,8 @@ amp-img {
 
 $rs: 16px;
 
-$font-serif: 'Lora';
-$font-sans: 'Ubuntu';
+$font-serif: 'Lora',Georgia,Cambria,"Times New Roman",Times,'Lora', serif;
+$font-sans: 'Ubunutu',"Helvetica Neue", 'Open Sans', Arial, Helvetica, sans-serif;
 
 @mixin respond-to($breakpoint) {
   @media only screen and (max-width: $breakpoint + px) {
@@ -59,7 +62,7 @@ body {
   background-color: $dark_level_3;
   font-family: $font-sans;
   color: $white_color;
-  opacity: 1;
+  opacity: $opacity_primary;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -90,13 +93,20 @@ body {
       font-style: normal;
       font-size: 18px;
       line-height: 30px;
-
+      color: $white_color;
+      // opacity: $opacity_secondary;
       a {
         text-decoration: none;
-        color: #999999;
+        color: $accent_color;
+        opacity: $opacity_primary;
         &:hover {
-          color: #333333;
+          // color: #333333;
         }
+      }
+      p {
+        color: $white_color;
+        opacity: $opacity_secondary;
+        display: inline;
       }
   }
 
@@ -118,14 +128,16 @@ body {
     outline: 0;
     line-height: 50px;
     word-break: break-word;
-    color: #333333;
+    color: $white_color;
+    opacity: $opacity_primary;
   }
   .blog-description {
     font-size: 28px;
     margin: 0 0 20px;
     padding: 0;
     line-height: 1.2;
-    color: #666666;
+    color: $white_color;
+    opacity: $opacity_secondary;
     font-weight: 300;
   }
 }
@@ -141,7 +153,7 @@ body {
 
   article {
     padding: 20px 0;
-    border-bottom: 1px solid #f2f2f0;
+    border-bottom: 1px solid rgba(255, 255, 255, $opacity_divider);
     &:last-child {
       border-bottom: 0px;
     }
@@ -155,9 +167,11 @@ body {
       margin: 0 0;
       a {
         text-decoration: none;
-        color: #333332;
+        color: $white_color;
+        opacity: $opacity_primary;
         &:hover {
           text-decoration: none;
+          color: $accent_color;
         }
       }
     }
@@ -167,11 +181,13 @@ body {
       font-style: normal;
       font-size: 20px;
       line-height: 1.59;
-      color: #666665;
+      color: $white_color;
+      opacity: $opacity_secondary;
     }
     .post-meta {
       font-size: 14px;
-      color: #b3b3b1;
+      color: $white_color;
+      opacity: #opacity_disabled;
       line-height: 30px;
       a {
         color: #b3b3b1;
@@ -189,11 +205,12 @@ body {
 }
 
 .index-headline {
-  border-top: 1px solid #dededc;
+  border-top: 1px solid rgba(255, 255, 255, $opacity_divider);
   margin: 0;
   padding: 16px 0;
   span {
-    color: #b3b3b1;
+    color: $white_color;
+    opacity: $opacity_secondary;
     font-size: $rs / 8 * 5;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -220,14 +237,20 @@ body {
   max-width: 700px;
   font-size: $rs / 4 * 3;
   text-align: center;
-  color: #999999;
+  color: $white_color;
+  // opacity: $opacity_disabled;
   line-height: $rs * 1.1;
   a {
-    color: #666666;
+    opacity: $opacity_primary;
+    color: $accent_color;
     text-decoration: none;
     &:hover {
-      color: #333333;
+      // color: #333333;
     }
+  }
+  p {
+    opacity: $opacity_disabled;
+    display: inline;
   }
 }
 
@@ -343,8 +366,8 @@ body {
       display: block;
       width: 15%;
       margin: 30px auto;
-      border: 0px solid #dddddd;
-      border-top: 1px solid #dddddd;
+      border: 0px solid rgba(255, 255, 255, $opacity_divider);
+      border-top: 1px solid rgba(255, 255, 255, $opacity_divider);
     }
     blockquote {
       margin: 0 0 30px;
@@ -390,8 +413,9 @@ body {
       display: block;
       width: 15%;
       margin: 16px 0 16px 100px;
-      border: 0px solid #dddddd;
-      border-top: 1px solid #dddddd;
+      // border: 1px solid rgba(255, 0, 0, .5); # reference format
+      border: 0px solid rgba(255, 255, 255, $opacity_divider);
+      border-top: 1px solid rgba(255, 255, 255, $opacity_divider);
     }
     .isLeft {
       float: left;
@@ -402,6 +426,8 @@ body {
         padding-bottom: $rs * 2;
       }
       .bio {
+        color: $white_color;
+        opacity: $opacity_secondary;
         margin-top: 18px;
         margin-bottom: 18px;
       }
@@ -419,6 +445,7 @@ body {
         text-decoration: none;
         &:hover {
           opacity: $opacity_primary;
+          color: $accent_color;
         }
       }
       .author-image {
@@ -437,6 +464,8 @@ body {
         padding: 0;
         margin: 0;
         padding-left: 100px;
+        color: $white_color;
+        opacity: $opacity_primary;
       }
       p {
         font-size: 14px;
@@ -446,7 +475,8 @@ body {
         margin: 0;
         padding-left: 100px;
         &.published {
-          color: #999999;
+          color: $white_color;
+          opacity: $opacity_disabled;
         }
       }
     }
@@ -471,23 +501,17 @@ body {
         line-height: 1.3;
         color: $white_color;
         a {
-          color: $white_color;
-          opacity: $opacity_secondary;
+          color: $accent_color;
+          opacity: $opacity_primary;
           text-decoration: none;
           &:hover {
-            opacity: $opacity_primary;
+            // opacity: $opacity_primary;
           }
         }
-        .copyright {
-        color: $white_color;
-        opacity: $opacity_disabled;
-        }
-        .poweredbyx {
-          display: block;
-          padding-bottom: 18px;
-          font-weight: 700;
+        p {
           color: $white_color;
-          opacity: $opacity_disabled;
+          opacity: $opacity_secondary;
+          display: inline;
         }
       }
     }
@@ -507,6 +531,7 @@ body {
     }
     &:hover {
       opacity: $opacity_primary;
+      color: $accent_color;
     }
   }
 }
