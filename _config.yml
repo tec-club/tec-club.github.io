@@ -20,3 +20,5 @@ kramdown:
 
 gems:
   - jekyll-paginate
+  - jekyll-mentions
+  - jemoji
