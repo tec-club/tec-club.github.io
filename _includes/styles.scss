@@ -1,6 +1,8 @@
 @import 'bourbon/bourbon';
 @import 'syntax-highlighting';
 
+{% assign author = site.data.authors[page.author] %}
+
 $grey-color:       #828282;
 
 .icon {
@@ -232,7 +234,7 @@ body {
     margin-bottom: 50px;
   }
   .author-image {
-    background-image: url({{ site.baseurl }}{{site.author_image}});
+    background-image: url({{ site.baseurl }}{{author.image}});
     display: inline-block;
     width: 30px;
     height: 30px;

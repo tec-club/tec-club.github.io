@@ -1,7 +1,7 @@
-nathan:
+nathan_fallahi:
     name: Nathan Fallahi
+    bio: >
+      Just a boy and his keyboard.
+    image: "/assets/images/nathan_fallahi.jpg"
     twitter: Nashafa
-
-banana:
-    name: why isn't this working
-    twitter: NASA
+    github: nashafa
