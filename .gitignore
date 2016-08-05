@@ -12,3 +12,7 @@ _site/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Custom batch file for Windows #
+######################
+RUN.bat
