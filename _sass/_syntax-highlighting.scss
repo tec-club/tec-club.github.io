@@ -1,11 +1,19 @@
 /**
  * Syntax highlighting styles
  */
+ 
+$dark_level_1: #000000;
+$dark_level_2: #212121;
+$dark_level_3: #303030;
+$dark_level_4: #424242;
+$white_color: #FFFFFF;
+$accent_color: #FFC107;
+
 .highlight {
-    background: #fff;
+    background: #dark_level_3;
 
     .highlighter-rouge & {
-      background: #eef;
+      background: #000000;
     }
 
     .c     { color: #998; font-style: italic } // Comment

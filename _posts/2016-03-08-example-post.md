@@ -24,3 +24,18 @@ Mea suas vituperatoribus et, virtute corpora quaestio cum ut. Ne solet nostrum c
 Ne ius nominavi verterem. Principes voluptaria pro at. Sint mediocrem cum ea, his purto dicat scaevola ad. Per quem magna gubergren id, pri in noluisse salutatus imperdiet. In postea consequat percipitur vis, nam postea commodo lobortis an, ut atqui antiopam eloquentiam eum.
 
 > Erat officiis probatus eam ea, nibh legere insolens ad sit. Nec alii dicam ad, cibo regione per no. Verear invenire ut usu, nec mazim euripidis in. Molestie placerat id quo, quo dissentias complectitur ex. Ex probatus principes efficiantur pro, possit perfecto ut eum. Vix ei summo perpetua, enim adhuc vix ei, sed in homero delicata periculis. Praesent intellegat qui ne.
+
+{% highlight html %}
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Lora|Ubuntu" rel="stylesheet">
+  <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+  <meta name="theme-color" content="#FFC107">
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+</head>
+{% endhighlight %}
