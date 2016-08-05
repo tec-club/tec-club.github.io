@@ -26,9 +26,8 @@ layout: default
       </article>
     {% endfor %}
   </div>
-  
-  <nav class="pagination" role="navigation">
-    {% if paginator.next_page %}
+  {% if paginator.next_page %}
+    <nav class="pagination" role="navigation">
       {% if paginator.page == 1 }
         <a class"older-posts" href="{{ site.baseurl }}/page/{{ paginator.next_page }}/">Older posts &gt;</a>
         {% else %}
@@ -44,8 +43,8 @@ layout: default
             <a class="older-posts disabled">Older posts &gt;</a> 
           {% endif %}
       {% endif %}
-    {% endif %}
-  </nav>
+    </nav>
+  {% endif %}
 
 </main>
 
