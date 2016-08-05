@@ -10,7 +10,7 @@ $dark_level_2: #212121;
 $dark_level_3: #303030;
 $dark_level_4: #424242;
 $white_color: #FFFFFF;
-$accent_color: #FFC107;
+$accent_color: {{ site.accent_color }};
 $opacity_primary: 1.0;
 $opacity_secondary: 0.7;
 $opacity_disabled: 0.5;
@@ -176,14 +176,28 @@ body {
       }
     }
     .post-excerpt {
-      letter-spacing: -0.02em;
-      font-weight: 300;
+      // letter-spacing: -0.02em;
+      font-weight: 400;
       font-style: normal;
       font-size: 20px;
       line-height: 1.59;
       color: $white_color;
       opacity: $opacity_secondary;
     }
+    // p {
+    //   font-weight: 400;
+    //   font-style: normal;
+    //   font-size: 22px;
+    //   line-height: 1.59;
+    //   letter-spacing: -.002em;
+    //   margin-top: 30px;
+    //   margin-bottom: 0;
+    //   color: $white_color;
+    //   opacity: $opacity_secondary;
+    //   -webkit-hyphens: auto;
+    //   -moz-hyphens: auto;
+    //   hyphens: auto;
+    // }
     .post-meta {
       font-size: 14px;
       color: $white_color;
