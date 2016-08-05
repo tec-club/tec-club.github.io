@@ -12,6 +12,7 @@ paginate:	5 # The number of posts to show per page on your homepage
 paginate_path: "/page/:num/"
 permalink: pretty
 name: CdMHS TEC Club
+accent_color: "#FFC107" # to be implemented
 
 # Build settings
 markdown: kramdown
