@@ -4,58 +4,55 @@ layout: default
 {% assign author = site.data.authors[page.author] %}
 
 <main class="content" role="main">
-  <article class="post">
-    <div class="post-meta">
-      <h1 class="post-title">{{ page.title }}</h1>
-    </div>
+    <article class="post">
+        <div class="post-meta">
+            <h1 class="post-title">{{ page.title }}</h1>
+        </div>
 
-    <section class="post-content">
-      <a name="topofpage"></a>
-      {{content}}
-    </section>
-    <footer class="post-footer">
-      <section class="share">
-        <a class="icon" href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.id }}&text={{page.title | cgi_escape}}&via={{ site.twitter_username }}" target="_blank">
-          Share on
-          {% include icon-twitter.html %}
-        </a>
-      </section>
-    </footer>
-    <div class="bottom-teaser cf">
-      <div class="isLeft">
-        <h5 class="index-headline featured"><span>Written by</span></h5>
-        <section class="author">
-          <div class="author-image"></div>
-          <h4>{{ author.name }}</h4>
-          <p class="bio">{{ author.bio }}</p>
-
-          <p>
-            <span>
-              {% if author.github %}
-                {% include icon-github.html username=author.github %}
-              {% endif %}
-            </span>
-
-            <span>
-              {% if author.twitter %}
-                {% include icon-twitter.html username=author.twitter %}
-              {% endif %}
-            </span>
-          </p>
-          <hr>
-          <p class="published">Published <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time></p>
+        <section class="post-content">
+            <a name="topofpage"></a>
+            {{content}}
         </section>
-      </div>
-      {{/post}}
-      <div class="isRight">
-        <h5 class="index-headline featured"><span>Credits</span></h5>
-        <footer class="site-footer">
-          <div class="inner">
-            <section class="copyright"><p>&copy; {{ site.time | date: '%Y' }} </p><a href="mailto:{{ site.email}}">{{ site.name }}</a></section>
-            <section class="poweredbyx"><p>Made with </p><a href="https://jekyllrb.com"> Jekyll</a><p> and </p><a href="https://github.com/ageitgey/amplify">Amplify</a></section>
-          </div>
+        <footer class="post-footer">
+            <section class="share">
+                <a class="icon" href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.id }}&text={{page.title | cgi_escape}}&via={{ site.twitter_username }}" target="_blank">
+                    Share on {% include icon-twitter.html %}
+                </a>
+            </section>
         </footer>
-      </div>
-    </div>
-  </article>
+        <div class="bottom-teaser cf">
+            <div class="isLeft">
+                <h5 class="index-headline featured"><span>Written by</span></h5>
+                <section class="author">
+                    <div class="author-image"></div>
+                    <h4>{{ author.name }}</h4>
+                    <p class="bio">{{ author.bio }}</p>
+                    <p>
+                        <span>
+                            {% if author.github %}
+                                {% include icon-github.html username=author.github %}
+                            {% endif %}
+                        </span>
+                        <span>
+                            {% if author.twitter %}
+                                {% include icon-twitter.html username=author.twitter %}
+                            {% endif %}
+                        </span>
+                    </p>
+                    <hr>
+                    <p class="published">Published <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time></p>
+                </section>
+            </div>
+            {{/post}}
+            <div class="isRight">
+                <h5 class="index-headline featured"><span>Credits</span></h5>
+                <footer class="site-footer">
+                    <div class="inner">
+                        <section class="copyright"><p>&copy; {{ site.time | date: '%Y' }} </p><a href="mailto:{{ site.email}}">{{ site.name }}</a></section>
+                        <section class="poweredbyx"><p>Made with </p><a href="https://jekyllrb.com"> Jekyll</a><p> and </p><a href="https://github.com/ageitgey/amplify">Amplify</a></section>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </article>
 </main>
