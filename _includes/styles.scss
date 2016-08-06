@@ -40,8 +40,9 @@ amp-img {
 
 $rs: 16px;
 
-$font-serif: 'Lora',Georgia,Cambria,"Times New Roman",Times,'Lora', serif;
-$font-sans: 'Ubunutu',"Helvetica Neue", 'Open Sans', Arial, Helvetica, sans-serif;
+$font-serif: 'Lora', serif;
+$font-sans: 'Open Sans', sans-serif;
+$font-ui: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
 
 @mixin respond-to($breakpoint) {
   @media only screen and (max-width: $breakpoint + px) {
@@ -51,157 +52,151 @@ $font-sans: 'Ubunutu',"Helvetica Neue", 'Open Sans', Arial, Helvetica, sans-seri
 
 // Only needed for syntax highlighting
 %vertical-rhythm {
-  margin-bottom: $rs;
+    margin-bottom: $rs;
 }
-
 main {
-  display: block;
+    display: block;
 }
 
 body {
-  background-color: $dark_level_3;
-  font-family: $font-sans;
-  color: $white_color;
-  opacity: $opacity_primary;
-  margin: 0;
-  padding: 0;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-font-feature-settings: "liga=1, dlig=1";
-  -ms-font-feature-settings: "liga", "dlig";
-  -webkit-font-feature-settings: "liga", "dlig";
-  -o-font-feature-settings: "liga", "dlig";
-  font-feature-settings: "liga", "dlig";
+    background-color: $dark_level_3;
+    font-family: $font-sans;
+    color: $white_color;
+    opacity: $opacity_primary;
+    margin: 0;
+    padding: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-feature-settings: "liga=1, dlig=1";
+    -ms-font-feature-settings: "liga", "dlig";
+    -webkit-font-feature-settings: "liga", "dlig";
+    -o-font-feature-settings: "liga", "dlig";
+    font-feature-settings: "liga", "dlig";
 }
 
 .site-header {
-  position: relative;
-  width: 100%;
-  max-width: 700px;
-  margin: 16px auto 0 auto;
-  @include box-sizing(border-box);
-  @include respond-to(800) {
-    padding: 0 $rs * 1;
-  }
-
-  .page-links {
-      display: block;
-      position: absolute;
-      top: 10px;
-      right: $rs;
-      font-weight: 200;
-      font-style: normal;
-      font-size: 18px;
-      line-height: 30px;
-      color: $white_color;
-      // opacity: $opacity_secondary;
-      a {
-        text-decoration: none;
-        color: $accent_color;
-        opacity: $opacity_primary;
-        &:hover {
-          // color: #333333;
-        }
-      }
-      p {
+    font-family: $font-ui;
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin: 16px auto 0 auto;
+    @include box-sizing(border-box);
+    @include respond-to(800) {
+        padding: 0 $rs * 1;
+    }
+    .page-links {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: $rs;
+//        font-weight: 200;
+        font-style: normal;
+        font-size: 18px;
+        line-height: 30px;
         color: $white_color;
-        opacity: $opacity_secondary;
-        display: inline;
-      }
-  }
-
+        a {
+            text-decoration: none;
+            color: $accent_color;
+            opacity: $opacity_primary;
+        }
+        p {
+            color: $white_color;
+            opacity: $opacity_secondary;
+            display: inline;
+        }
+    }
 }
 
 .blog-header {
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
-  position: relative;
-  padding: 0;
-  @include box-sizing(border-box);
-
-  .blog-title {
-    margin-bottom: 8px;
-    font-size: 50px;
-    font-weight: 700;
-    letter-spacing: -2px;
-    outline: 0;
-    line-height: 50px;
-    word-break: break-word;
-    color: $white_color;
-    opacity: $opacity_primary;
-  }
-  .blog-description {
-    font-size: 28px;
-    margin: 0 0 20px;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
     padding: 0;
-    line-height: 1.2;
-    color: $white_color;
-    opacity: $opacity_secondary;
-    font-weight: 300;
-  }
+    @include box-sizing(border-box);
+    .blog-title {
+        font-family: $font-sans;
+        margin-bottom: 8px;
+        font-size: 50px;
+        font-weight: 700;
+        letter-spacing: -2px;
+        outline: 0;
+        line-height: 50px;
+        word-break: break-word;
+        color: $white_color;
+        opacity: $opacity_primary;
+    }
+    .blog-description {
+        font-family: $font-serif;
+        font-size: 28px;
+        margin: 0 0 20px;
+        padding: 0;
+        line-height: 1.2;
+        color: $white_color;
+        opacity: $opacity_secondary;
+        font-weight: 300;
+    }
 }
 
 .content {
-  width: 100%;
-  max-width: 700px;
-  margin: 25px auto 0 auto;
-  @include box-sizing(border-box);
-  @include respond-to(800) {
-    padding: 0 $rs * 1;
-  }
-
-  article {
-    padding: 20px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, $opacity_divider);
-    &:last-child {
-      border-bottom: 0px;
+    width: 100%;
+    max-width: 700px;
+    margin: 25px auto 0 auto;
+    @include box-sizing(border-box);
+    @include respond-to(800) {
+        padding: 0 $rs * 1;
     }
-    .post-title {
-      letter-spacing: -0.02em;
-      font-weight: 700;
-      font-style: normal;
-      display: block;
-      font-size: 36px;
-      line-height: 1.15;
-      margin: 0 0;
-      a {
-        text-decoration: none;
-        color: $white_color;
-        opacity: $opacity_primary;
-        &:hover {
-          text-decoration: none;
-          color: $accent_color;
+    article {
+        padding: 20px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, $opacity_divider);
+        &:last-child {
+            border-bottom: 0px;
         }
-      }
-    }
-    .post-excerpt {
-      // letter-spacing: -0.02em;
-      font-weight: 400;
-      font-style: normal;
-      font-size: 20px;
-      line-height: 1.59;
-      color: $white_color;
-      opacity: $opacity_secondary;
-    }
-    .post-meta {
-      font-size: 14px;
-      color: $white_color;
-      opacity: #opacity_disabled;
-      line-height: 30px;
-      a {
-        color: #b3b3b1;
-        text-decoration: none;
-        &:hover {
-          text-decoration: underline;
+        .post-title {
+            letter-spacing: -0.02em;
+            font-weight: 700;
+            font-style: normal;
+            display: block;
+            font-size: 36px;
+            line-height: 1.15;
+            margin: 0 0;
+            a {
+                text-decoration: none;
+                color: $white_color;
+                opacity: $opacity_primary;
+                &:hover {
+                    text-decoration: none;
+                    color: $accent_color;
+                }
+            }
         }
-      }
+        .post-excerpt {
+            // letter-spacing: -0.02em;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 20px;
+            line-height: 1.59;
+            color: $white_color;
+            opacity: $opacity_secondary;
+        }
+        .post-meta {
+            font-size: 14px;
+            color: $white_color;
+            opacity: #opacity_disabled;
+            line-height: 30px;
+            a {
+                color: #b3b3b1;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
     }
-  }
 }
 
 .post-template .content {
-  max-width: 700px;
+    max-width: 700px;
 }
 
 .index-headline {
@@ -219,7 +214,6 @@ body {
 
 .pagination {
   color: $white_color;
-  // opacity: $opacity_secondary;
   text-align: center;
   padding: $rs * 1 0 0;
   font-size: $rs / 4 * 3;
@@ -234,32 +228,33 @@ body {
 }
 
 .site-footer {
-  margin: 0 auto;
-  padding: $rs * 3 0;
-  width: 100%;
-  max-width: 700px;
-  font-size: $rs / 4 * 3;
-  text-align: center;
-  color: $white_color;
-  // opacity: $opacity_disabled;
-  line-height: $rs * 1.1;
-  a {
-    opacity: $opacity_primary;
-    color: $accent_color;
-    text-decoration: none;
-    &:hover {
-      // color: #333333;
+    font-family: $font-ui;
+    margin: 0 auto;
+    padding: $rs * 3 0;
+    width: 100%;
+    max-width: 700px;
+    font-size: $rs / 4 * 3;
+    text-align: center;
+    color: $white_color;
+    // opacity: $opacity_disabled;
+    line-height: $rs * 1.1;
+    a {
+        opacity: $opacity_primary;
+        color: $accent_color;
+        text-decoration: none;
+        &:hover {
+            // color: #333333;
+        }
     }
-  }
-  p {
-    opacity: $opacity_disabled;
-    display: inline;
-  }
+    p {
+        opacity: $opacity_disabled;
+        display: inline;
+    }
 }
 
 .post {
   .post-meta {
-    font-family: $font-sans;
+    font-family: $font-ui;
   }
   .post-title {
     font-weight: 700;
